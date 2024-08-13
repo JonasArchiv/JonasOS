@@ -5,13 +5,17 @@ email_configurations = {
         "username": "EMAIL_1",
         "app_password": "PASSWORD_1",
         "imap_server": "imap.server1.com",
-        "imap_port": 993
+        "imap_port": 993,
+        "smtp_server": "smtp.server2.com",
+        "smtp_port": 465,
     },
     "email_2": {
         "username": "EMAIL_2",
         "app_password": "PASSWORD_2",
         "imap_server": "imap.server2.com",
-        "imap_port": 993
+        "imap_port": 993,
+        "smtp_server": "smtp.server2.com",
+        "smtp_port": 465,
     }
 }
 
