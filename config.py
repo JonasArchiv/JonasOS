@@ -1,4 +1,5 @@
 # Email configurations
+
 email_configurations = {
     "email_1": {
         "username": "EMAIL_1",
@@ -13,3 +14,7 @@ email_configurations = {
         "imap_port": 993
     }
 }
+
+
+def get_email_config(email_key):
+    return email_configurations.get(email_key)
