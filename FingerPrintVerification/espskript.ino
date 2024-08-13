@@ -76,3 +76,60 @@ String verifyFingerprint() {
   }
   return "Found ID: " + String(finger.fingerID);
 }
+
+String addFingerprint() {
+  String result;
+  result += "Place finger to add\n";
+  uint8_t p = finger.getImage();
+  if (p != FINGERPRINT_OK) {
+    result += "Error getting image\n";
+    return result;
+  }
+  p = finger.image2Tz();
+  if (p != FINGERPRINT_OK) {
+    result += "Error processing image\n";
+    return result;
+  }
+  result += "Place same finger again\n";
+  p = finger.getImage();
+  if (p != FINGERPRINT_OK) {
+    result += "Error getting image\n";
+    return result;
+  }
+  p = finger.image2Tz();
+  if (p != FINGERPRINT_OK) {
+    result += "Error processing image\n";
+    return result;
+  }
+  uint16_t id = 0;
+  p = finger.createModel();
+  if (p != FINGERPRINT_OK) {
+    result += "Error creating model\n";
+    return result;
+  }
+  p = finger.storeModel(id);
+  if (p != FINGERPRINT_OK) {
+    result += "Error storing model\n";
+    return result;
+  }
+  result += "Fingerprint added successfully\n";
+  return result;
+}
+
+String listFingerprints() {
+  String result = "Listing fingerprints:\n";
+  for (uint16_t i = 0; i < 10; i++) {
+    result += "ID: " + String(i) + ", Name: Fingerprint " + String(i) + "\n";
+  }
+  return result;
+}
+
+String readSerialData() {
+  String serialData;
+  if (Serial.available()) {
+    serialData = Serial.readStringUntil('\n');
+  } else {
+    serialData = "No data available";
+  }
+  return serialData;
+}
