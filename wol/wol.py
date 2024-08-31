@@ -45,6 +45,8 @@ def main():
     config_filename = 'config.json'
     config = load_config(config_filename)
 
+    print("Wake on LAN System - JonasOS")
+
     while True:
         action = input("Wählen Sie eine Aktion: (1) Gerät anschalte (2) Gerät hinzufügen (3) Skript Beenden: ")
 
