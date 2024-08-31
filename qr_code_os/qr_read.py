@@ -43,5 +43,5 @@ def read_qr_code_from_webcam():
     return results
 
 
-webcam_qr_code_text = read_qr_code_from_webcam()
-print(f"Alle QR-Codes aus der Webcam: {webcam_qr_code_text}")
+# webcam_qr_code_text = read_qr_code_from_webcam()
+# print(f"Alle QR-Codes aus der Webcam: {webcam_qr_code_text}")

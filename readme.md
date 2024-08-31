@@ -29,3 +29,20 @@ Setup then in config.py
 ### Timezone
 - Get the current time in Germany
 - Get the current time in a specific timezone
+- Convert a time from one timezone to another
+- List all timezones with their current time
+
+### TimeTools
+- Stowpwatch
+- Timer
+
+## JonasOS
+`python main.py` to start the Assistant mit all features. <br>
+Choose a option from the list and answer with the number. <br>
+Follow the instructions. <br>
+
+
+## Preview Pictures
+<img src="preview/jonasos_start.png"> <br>
+<img src="preview/example1.png"> <br>
+<img src="preview/example2.png"> <br>

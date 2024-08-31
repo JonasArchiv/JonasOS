@@ -38,10 +38,10 @@ def create_custom_qr_code(data, size=300, body_color="#000000", bg_color="#FFFFF
 
 
 # Example Code
-create_custom_qr_code(
+'''create_custom_qr_code(
     data="https://github.com/JonasHeilig",
     size=400,
     body_color="#000000",
     bg_color="#ffffff",
     logo_path="github.png"
-)
+)'''
