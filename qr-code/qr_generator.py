@@ -26,6 +26,9 @@ def create_custom_qr_code(data, size=300, body_color="#000000", bg_color="#FFFFF
 
         pos = ((img.size[0] - logo_width) // 2, (img.size[1] - logo_height) // 2)
 
+        draw = ImageDraw.Draw(img)
+        draw.rectangle([pos, (pos[0] + logo_width, pos[1] + logo_height)], fill=bg_color)
+
         img.paste(logo, pos, mask=logo)
 
     filename = "custom_qr_code.png"
@@ -35,10 +38,10 @@ def create_custom_qr_code(data, size=300, body_color="#000000", bg_color="#FFFFF
 
 
 # Example Code
-'''create_custom_qr_code(
+create_custom_qr_code(
     data="https://github.com/JonasHeilig",
     size=400,
     body_color="#000000",
     bg_color="#ffffff",
     logo_path="github.png"
-)'''
+)
